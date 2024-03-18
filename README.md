@@ -1,6 +1,6 @@
 | Tamaño del repositorio        | Hits           | Lenguaje utilizado|
 | ------------- |:-------------:| :-------------:| 
-| ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion2-23.svg?style=for-the-badge)      | [![HitCount](http://hits.dwyl.com/jciccio/programacion2-23.svg)](http://hits.dwyl.com/jciccio/programacion2-23) | Java|
+| ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion1-24.svg?style=for-the-badge)      | [![HitCount](http://hits.dwyl.com/jciccio/programacion2-23.svg)](http://hits.dwyl.com/jciccio/programacion1-24) | Java|
 
 # Programación 2-23
 
