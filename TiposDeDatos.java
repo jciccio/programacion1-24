@@ -14,7 +14,6 @@ public class TiposDeDatos {
 		System.out.println("Numero 2: " + numero2);
 		System.out.println("Numero 3: " + numero3);
 
-
 		double numeroReal1 = 3.14;
 		double numeroReal2 = 6.012;
 		double numeroReal3 = numeroReal1 / numeroReal2;
@@ -26,7 +25,6 @@ public class TiposDeDatos {
 		// Casting para convertir un tipo de dato a otro
 		double divisionReal = (double)5 / 2;
 		System.out.println(divisionReal);
-
 
 		int numeroEntero4 = (int)5.99999999999;
 		System.out.println(numeroEntero4);
