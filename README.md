@@ -87,7 +87,7 @@ Scanner scanner = new Scanner(System.in);
 System.out.println("Digite su nombre: ");
 String nombre = scanner.nextLine();
 ```
-* JOptionPane (utilizando una ventana emergente:
+* JOptionPane (utilizando una ventana emergente):
 
 Import necesario:
 ```java
@@ -130,7 +130,7 @@ catch (Exception e){
 
 Note que se codifica primero el bloque con la excepción más específica `NumberFormatException` y luego el bloque con la excepción general en este caso.
 
-Èjemplo visto en clase:
+Conversión a un número:
 ```java
 public int convertirStringAInt(String valor){
    int numero = 0;
@@ -138,8 +138,23 @@ public int convertirStringAInt(String valor){
       numero = Integer.parseInt(valor);
    }
    catch(NumberFormatException e){
-      System.out.println("Ocurrio un error al convertir: " + valor);
+      System.err.println("Ocurrio un error al convertir: " + valor);
    }
    return numero;
 }
+```
+
+Ejemplo visto en clase (Interfaz)
+```java 
+public double solicitarNumeroReal(String mensaje){
+    String numeroHilera = JOptionPane.showInputDialog(mensaje);
+    double numero = 0;
+    try{
+      numero = Double.parseDouble(numeroHilera);
+    }
+    catch(NumberFormatException e){
+      System.err.println("Ocurrio un error al convertir el numero: " + e);
+    }
+    return numero;
+  }
 ```
