@@ -65,7 +65,7 @@ Persona persona1 = new Persona();
 | int()        | Conversión a número entero  | int(12.4) --> 12
 | +        | Conversión a hilera de caracteres | "" + 12 --> "12"
 
-* Conversión de String a números:
+#### Conversión de String a números:
 
 | Método        | Descripción           | Ejemplo
 | ------------- |:-------------:| :-------------:|
@@ -75,7 +75,7 @@ Persona persona1 = new Persona();
 
 ### Solicitud de datos al usuario
 
-* Consola
+#### Consola
 
 Import necesario:
 ```java
@@ -87,7 +87,7 @@ Scanner scanner = new Scanner(System.in);
 System.out.println("Digite su nombre: ");
 String nombre = scanner.nextLine();
 ```
-* JOptionPane (utilizando una ventana emergente):
+#### JOptionPane (utilizando una ventana emergente):
 
 Import necesario:
 ```java
@@ -157,4 +157,48 @@ public double solicitarNumeroReal(String mensaje){
     }
     return numero;
   }
+```
+
+### Sobrecarga de métodos y constructores
+
+La firma de un método está compuesta por su nombre y los tipos de datos de los parámetros que recibe (en orden).
+
+La sobrecarga consiste en tener métodos con el mismo nombre pero con distintos parámetros. Java utiliza la cantidad de parámetros, junto con sus tipos para determinar cuál es el método correcto que debe ser invocado.
+
+De igual forma, en Java se pueden sobrecargar los constructores de una clase (permitiendo tener varios). Esto se llama sobrecarga de constructores.
+
+Ejemplos vistos en clase:
+
+Sobrecarga de métodos (clase CalculadoraV2.java)
+```java
+   public double multiplicar(double valor1, double valor2){
+      double resultado = valor2 * valor1;
+      return resultado;
+   }
+
+   public int multiplicar(int valor1, int valor2){
+      return valor1*valor2;
+   }
+
+   public double multiplicar(double valor1, int valor2){
+      return valor1*valor2;
+   }
+
+   public double multiplicar(int valor1, int valor2, int valor3){
+      return valor1*valor2*valor3;
+   }
+```
+
+Sobrecarga de constructores (clase Carta.java)
+
+```java
+public Carta() {
+   palo = "Diamantes";
+   numero = 3;
+}
+
+public Carta(int numero, String palo){
+   this.numero = numero;
+   this.palo = palo;
+}
 ```
