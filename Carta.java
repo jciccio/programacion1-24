@@ -7,6 +7,16 @@ public class Carta {
 		numero = 3;
 		palo = "Espadas";
 	}
+	//Carta carta3 = new Carta(7, "Diamantes");
+	public Carta(int numero, String palo){
+		this.numero = numero;
+		this.palo = palo;
+	}
+	// 
+	public Carta(int numero){
+		this.numero = numero;
+		this.palo = "Corazones";
+	}
 
 	// Métodos - Acciones que llevamos a cabo en la clase
 	// público o privado -- Accesibilidad

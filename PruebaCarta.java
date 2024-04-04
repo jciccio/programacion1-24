@@ -20,10 +20,10 @@ public class PruebaCarta{
 
 		System.out.println("Carta 2: " + numeroCarta2 + " de " + paloCarta2);
 
-		Carta carta3 = new Carta();
+		Carta carta3 = new Carta(7, "Diamantes");
 		System.out.println("Carta 3: " + carta3.getNumero() + " de " + carta3.getPalo());
 
-		Carta carta4 = new Carta();
+		Carta carta4 = new Carta(6);
 		System.out.println("Carta 4: " + carta4.getNumero() + " de " + carta4.getPalo());
 	}
 }

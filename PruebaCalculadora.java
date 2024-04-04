@@ -30,7 +30,12 @@ public class PruebaCalculadora{
 		double resultado = c2.sumar(3.14, 5.28);
 		System.out.println("3.14 + 5.28 = " + resultado);
 
-		resultado = c2.restar(3.14, 5.28);
+		System.out.println (c2.sumar(5,6));
+
+		System.out.println (c2.sumar(5.6,6));
+		System.out.println (c2.sumar(5,6.78));
+
+	/*	resultado = c2.restar(3.14, 5.28);
 		System.out.println("3.14 - 5.28 = " + resultado);
 
 		resultado = c2.multiplicar(3.14, 5.28);
@@ -44,6 +49,6 @@ public class PruebaCalculadora{
 		System.out.print("Mundo\n");
 
 		System.out.println("Hola");
-		System.out.println("Mundo");
+		System.out.println("Mundo");*/
 	}
 }

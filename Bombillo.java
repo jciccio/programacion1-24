@@ -32,6 +32,7 @@ public class Bombillo{
 		b1.setWatts(100);
 		b1.setEstado(true);
 		b1.setColor("Amarillo");
+
 		System.out.println( b1.getWatts() );
 		System.out.println( b1.getEstado() );
 		System.out.println( b1.getColor() );
