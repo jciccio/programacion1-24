@@ -1,5 +1,16 @@
 public class CalculadoraV2{
 	
+	/*
+		// Queremos hacer un método que reciba por parámetro un número real
+		// Y nos regrese la parte decimal
+		3.14 => 0.14
+		6.999999 => 0.999999
+	*/
+	public double calcularParteDecimal(double numeroReal){
+		return numeroReal - (int)(numeroReal);
+	}
+
+
 	public double sumar(double valorA, double valorB){
 		System.out.println("Estamos en el metodo: sumar(double, double)");
 		return valorA + valorB;
@@ -10,7 +21,6 @@ public class CalculadoraV2{
 		return valorA + valorB;
 	}	
 
-	
 	public double sumar(double valorA, int valorB){
 		System.out.println("Estamos en el metodo: sumar(double, int)");
 		return valorA + valorB;

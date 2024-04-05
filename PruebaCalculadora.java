@@ -35,6 +35,7 @@ public class PruebaCalculadora{
 		System.out.println (c2.sumar(5.6,6));
 		System.out.println (c2.sumar(5,6.78));
 
+		System.out.println(c2.calcularParteDecimal(3.5));
 	/*	resultado = c2.restar(3.14, 5.28);
 		System.out.println("3.14 - 5.28 = " + resultado);
 
