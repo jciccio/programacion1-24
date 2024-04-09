@@ -2,8 +2,21 @@ public class PruebaCarta{
 	public static void main (String args[]){
 		Carta carta1 = new Carta();
 		carta1.setPalo("Corazones");
-		carta1.setNumero(10);
-
+		carta1.setNumero(11);
+		carta1.imprimir();
+		carta1.imprimirSwitch();
+		carta1.setNumero(12);
+		carta1.imprimir();
+		carta1.imprimirSwitch();
+		carta1.setNumero(13);
+		carta1.imprimir();
+		carta1.imprimirSwitch();
+		carta1.setNumero(1);
+		carta1.imprimir();
+		carta1.imprimirSwitch();
+		carta1.setNumero(5);
+		carta1.imprimir();
+		carta1.imprimirSwitch();
 		Carta carta2 = new Carta();
 		carta2.setNumero(4);
 		carta2.setPalo("Treboles");

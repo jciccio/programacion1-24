@@ -2,7 +2,6 @@ public class Carta {
 	private int numero; // El número será un valor entre 1 y 13
 	private String palo; // Diamantes, Treboles, Corazones, Espadas
 
-
 	public Carta(){
 		numero = 3;
 		palo = "Espadas";
@@ -36,6 +35,47 @@ public class Carta {
 	}
 	public String getPalo(){
 		return palo;
+	}
+
+	public void imprimir(){
+		String numeroHilera = "";
+		if(numero == 1){
+			numeroHilera = "As";
+		}
+		else if (numero == 11){
+			numeroHilera = "J";
+		}
+		else if (numero == 12){
+			numeroHilera = "Q";
+		}
+		else if (numero == 13){
+			numeroHilera = "K";
+		}
+		else{
+			numeroHilera += numero;
+		}
+		System.out.println("La carta es un " + numeroHilera + " de " + palo);
+	}
+
+	public void imprimirSwitch(){
+		String numeroHilera = "";
+		switch(numero){
+			case 1:
+				numeroHilera = "As";
+			break;
+			case 11:
+				numeroHilera = "J";
+			break;
+			case 12:
+				numeroHilera = "Q";
+			break;
+			case 13:
+				numeroHilera = "K";
+			break;
+			default:
+				numeroHilera += numero;
+		}
+		System.out.println("La carta es un " + numeroHilera + " de " + palo);
 	}
 
 
