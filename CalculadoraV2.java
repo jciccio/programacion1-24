@@ -46,4 +46,56 @@ public class CalculadoraV2{
 	}
 
 
+	public int redondear(double numeroReal){
+		// Operador ternario
+	/*	int parteEntera = (int)numeroReal;
+		double parteDecimal = numeroReal - parteEntera;
+		int numero = (parteDecimal >= 0.5) ? parteEntera + 1 : parteEntera;
+		return numero; */
+		double valorAbsoluto = calcularValorAbsoluto(numeroReal);
+
+		int parteEntera = (int)valorAbsoluto; // 5.9999 => 5
+		double parteDecimal = valorAbsoluto - parteEntera; // 5.9999 - 5 => 0.9999
+		
+		int resultado = parteEntera;
+		if(parteDecimal >= 0.5){
+			resultado += 1;
+		}
+
+		if(numeroReal < 0){
+			resultado *= -1;
+		}
+		return resultado;
+	}
+
+	public int redondearV2(double numeroReal){
+		double resultado = 0;
+		if(numeroReal > 0){
+			int parteEntera = (int)numeroReal;
+			double parteDecimal = numeroReal - parteEntera;
+			if(parteDecimal >= 0.5){
+				resultado = parteEntera + 1;
+			}	
+		}
+		else{
+			numeroReal *= -1;
+			int parteEntera = (-1*numeroReal);
+			double parteDecimal = numeroReal - parteEntera;
+			if(parteDecimal >= 0.5){
+				resultado = parteEntera + 1;
+			}
+			resultado *= -1;	
+		}
+	}
+
+	public double calcularValorAbsoluto (double numeroReal){
+		// 5.6 => 5.6
+		// -2.3 => 2.3
+		double valorAbsoluto = numeroReal;
+		if (numeroReal < 0){
+			valorAbsoluto *= -1;
+		}
+		return valorAbsoluto;
+	}
+
 }

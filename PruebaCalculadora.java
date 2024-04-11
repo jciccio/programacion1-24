@@ -51,5 +51,8 @@ public class PruebaCalculadora{
 
 		System.out.println("Hola");
 		System.out.println("Mundo");*/
+
+		System.out.println(c2.calcularValorAbsoluto(5.6));
+		System.out.println(c2.calcularValorAbsoluto(-5.6));
 	}
 }
