@@ -68,7 +68,7 @@ public class CalculadoraV2{
 		return resultado;
 	}
 
-	public int redondearV2(double numeroReal){
+	/*public int redondearV2(double numeroReal){
 		double resultado = 0;
 		if(numeroReal > 0){
 			int parteEntera = (int)numeroReal;
@@ -86,7 +86,7 @@ public class CalculadoraV2{
 			}
 			resultado *= -1;	
 		}
-	}
+	}*/
 
 	public double calcularValorAbsoluto (double numeroReal){
 		// 5.6 => 5.6
@@ -96,6 +96,15 @@ public class CalculadoraV2{
 			valorAbsoluto *= -1;
 		}
 		return valorAbsoluto;
+	}
+
+
+	public int calcularSumatoria(int n){
+		int sumatoria = 0;
+		for (int i = 0 ; i <= n ; i++){
+			sumatoria +=  i ;
+		}
+		return sumatoria;
 	}
 
 }
