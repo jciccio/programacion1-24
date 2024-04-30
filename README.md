@@ -284,3 +284,98 @@ public String convertirNumeroCarta(){
 }
 ```
 
+### Estructuras de repetición
+
+### Ciclo while
+
+
+```java
+public double calcularPromedioWhile(){
+  double suma = 0;
+  int n = 0; // iteraciones que se harán y servirá como condición de parada
+
+  while(n < 5){
+    suma += interfazUsuario.solicitarNumeroEntero("Digite un numero (while)");
+    n++; // cambio de condición
+  }
+  return suma/5;
+}
+```
+
+### Ciclo do - while
+
+
+
+```java
+public double calcularPromedioDoWhile(){
+  double suma = 0;
+  int n = 0;
+
+  do {
+    suma += interfazUsuario.solicitarNumeroEntero("Digite un numero (do-while)");
+    n++;
+  }while(n < 5);
+  return suma/5;
+}
+```
+### Ciclo for
+
+Ejemplo tomado de la clase Matemáticas
+
+
+```java
+public double calcularPromedioFor(){
+  double suma = 0;
+
+  for (int  n = 0 ; n < 5 ; n++){
+    suma += interfazUsuario.solicitarNumeroEntero("Digite un numero (for)");
+  }
+
+  return suma /5;
+}
+```
+
+### Arreglos
+
+Ejemplos vistos en clase:
+
+```java
+//Declaración por extensión:
+int [] arreglo1 = {10,20,30,40,50};
+
+int [] arreglo2 = new int[5]
+// Genera un arreglo de 5 celdas [0,0,0,0,0]
+
+int tamanyo = arreglo.length // -> retorna el tamaño del arreglo
+
+// Las celdas se indexan a partir de 0, por lo que las celdas
+// siempre van desde [0,tamanyo[
+
+// Acceso a una celda:
+int y = arreglo1[1] // retorna un 20
+
+// Asignación a una celda:
+arreglo2[2] = 31;
+// cambia el arreglo a: [0,0,31,0,0]
+```
+
+Paso argumentos a un programa:
+
+```java
+public static void main (String[] args){
+    System.out.println("args.length " + args.length);
+    if (args.length > 0){
+      System.out.println(args[0]);  
+      int x = Integer.parseInt(args[0]);
+      int y = Integer.parseInt(args[1]);
+      int suma = x + y;
+      System.out.println("La suma es: " + suma);
+    }
+    ...
+```
+
+### Valores por referencia y copia
+
+  Al invocar un método, las variables de tipo primitivo, se invocan por copia.
+  Los objetos (arreglos, clases, etc.) se envían como una referencia a su ubicación en
+  memoria, por tanto si se modifican dentro del método, se modificará las variables que apunten a la misma referencia.
