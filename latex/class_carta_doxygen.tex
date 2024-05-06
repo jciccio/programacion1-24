@@ -1,0 +1,138 @@
+\doxysection{Carta\+Doxygen Class Reference}
+\hypertarget{class_carta_doxygen}{}\label{class_carta_doxygen}\index{CartaDoxygen@{CartaDoxygen}}
+Inheritance diagram for Carta\+Doxygen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_carta_doxygen}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_carta_doxygen_a63ad57d6feb6f1f4f8a20f08d58f8b19}\label{class_carta_doxygen_a63ad57d6feb6f1f4f8a20f08d58f8b19} 
+{\bfseries Carta\+Doxygen} ()
+\begin{DoxyCompactList}\small\item\em Constructor por omision. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_carta_doxygen_a178270e47c5450b409c7490970b43b54}{Carta\+Doxygen}} (int numero, String palo)
+\begin{DoxyCompactList}\small\item\em Constructor sobrecargado. \end{DoxyCompactList}\item 
+\Hypertarget{class_carta_doxygen_aeec2a0be5072488a721168816476ce2d}\label{class_carta_doxygen_aeec2a0be5072488a721168816476ce2d} 
+String {\bfseries to\+String} ()
+\item 
+String \mbox{\hyperlink{class_carta_doxygen_a19d2cd9eb0ee08ad771663cb6fb1c38e}{imprimir\+Switch}} ()
+\begin{DoxyCompactList}\small\item\em Imprime el contenido de la carta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_carta_doxygen_ab507750e659ddc7d9cacdb7a5d4711d9}{imprimir\+If}} ()
+\begin{DoxyCompactList}\small\item\em Imprime el contenido de la carta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_carta_doxygen_af04add609f16bbb2f9ce311f60f5b250}{set\+Numero}} (int numero\+Parametro)
+\begin{DoxyCompactList}\small\item\em Asigna un número a la carta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_carta_doxygen_ac36914d18d5dac7d04b68660478cab70}{set\+Palo}} (String palo\+Parametro)
+\begin{DoxyCompactList}\small\item\em Asigna un palo a la carta. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_carta_doxygen_a4e995743ee6c91203c7c51ab4ac19350}{get\+Palo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el valor del palo de la carta. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_carta_doxygen_ad590ba13de9cc89b2c3bd20571613d00}{get\+Numero}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el valor del número de la carta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase encargada de representar una carta de un naipe. Puede almacenar, retornar e imprimir los valores de la carta y un palo que la representa 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_carta_doxygen_a178270e47c5450b409c7490970b43b54}\label{class_carta_doxygen_a178270e47c5450b409c7490970b43b54} 
+\index{CartaDoxygen@{CartaDoxygen}!CartaDoxygen@{CartaDoxygen}}
+\index{CartaDoxygen@{CartaDoxygen}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{CartaDoxygen()}{CartaDoxygen()}}
+{\footnotesize\ttfamily Carta\+Doxygen.\+Carta\+Doxygen (\begin{DoxyParamCaption}\item[{int}]{numero,  }\item[{String}]{palo }\end{DoxyParamCaption})}
+
+
+
+Constructor sobrecargado. 
+
+Se utiliza para instanciar el objeto y asignarle el número y palo 
+\begin{DoxyParams}{Parameters}
+{\em numero} & número entero entre 1 y 13. \\
+\hline
+{\em palo} & hilera de caracteres con el nombre del palo. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_carta_doxygen_ad590ba13de9cc89b2c3bd20571613d00}\label{class_carta_doxygen_ad590ba13de9cc89b2c3bd20571613d00} 
+\index{CartaDoxygen@{CartaDoxygen}!getNumero@{getNumero}}
+\index{getNumero@{getNumero}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{getNumero()}{getNumero()}}
+{\footnotesize\ttfamily int Carta\+Doxygen.\+get\+Numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna el valor del número de la carta. 
+
+\begin{DoxyReturn}{Returns}
+int el palo que de la carta 
+\end{DoxyReturn}
+\Hypertarget{class_carta_doxygen_a4e995743ee6c91203c7c51ab4ac19350}\label{class_carta_doxygen_a4e995743ee6c91203c7c51ab4ac19350} 
+\index{CartaDoxygen@{CartaDoxygen}!getPalo@{getPalo}}
+\index{getPalo@{getPalo}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{getPalo()}{getPalo()}}
+{\footnotesize\ttfamily String Carta\+Doxygen.\+get\+Palo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna el valor del palo de la carta. 
+
+\begin{DoxyReturn}{Returns}
+String el palo que de la carta 
+\end{DoxyReturn}
+\Hypertarget{class_carta_doxygen_ab507750e659ddc7d9cacdb7a5d4711d9}\label{class_carta_doxygen_ab507750e659ddc7d9cacdb7a5d4711d9} 
+\index{CartaDoxygen@{CartaDoxygen}!imprimirIf@{imprimirIf}}
+\index{imprimirIf@{imprimirIf}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{imprimirIf()}{imprimirIf()}}
+{\footnotesize\ttfamily void Carta\+Doxygen.\+imprimir\+If (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime el contenido de la carta. 
+
+Imprime el contenido de la carta en consola haciendo la traducción entre el contenido de la carta y su valor J, Q, K o As y el palo utilizando una estructura de datos if internamente. \Hypertarget{class_carta_doxygen_a19d2cd9eb0ee08ad771663cb6fb1c38e}\label{class_carta_doxygen_a19d2cd9eb0ee08ad771663cb6fb1c38e} 
+\index{CartaDoxygen@{CartaDoxygen}!imprimirSwitch@{imprimirSwitch}}
+\index{imprimirSwitch@{imprimirSwitch}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{imprimirSwitch()}{imprimirSwitch()}}
+{\footnotesize\ttfamily String Carta\+Doxygen.\+imprimir\+Switch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime el contenido de la carta. 
+
+Imprime el contenido de la carta en consola haciendo la traducción entre el contenido de la carta y su valor J, Q, K o As y el palo utilizando una estructura de datos switch internamente. \Hypertarget{class_carta_doxygen_af04add609f16bbb2f9ce311f60f5b250}\label{class_carta_doxygen_af04add609f16bbb2f9ce311f60f5b250} 
+\index{CartaDoxygen@{CartaDoxygen}!setNumero@{setNumero}}
+\index{setNumero@{setNumero}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{setNumero()}{setNumero()}}
+{\footnotesize\ttfamily void Carta\+Doxygen.\+set\+Numero (\begin{DoxyParamCaption}\item[{int}]{numero\+Parametro }\end{DoxyParamCaption})}
+
+
+
+Asigna un número a la carta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & el número que tendrá la carta entre 1 y 13 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_carta_doxygen_ac36914d18d5dac7d04b68660478cab70}\label{class_carta_doxygen_ac36914d18d5dac7d04b68660478cab70} 
+\index{CartaDoxygen@{CartaDoxygen}!setPalo@{setPalo}}
+\index{setPalo@{setPalo}!CartaDoxygen@{CartaDoxygen}}
+\doxysubsubsection{\texorpdfstring{setPalo()}{setPalo()}}
+{\footnotesize\ttfamily void Carta\+Doxygen.\+set\+Palo (\begin{DoxyParamCaption}\item[{String}]{palo\+Parametro }\end{DoxyParamCaption})}
+
+
+
+Asigna un palo a la carta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em String} & el palo que tendrá la carta \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Carta\+Doxygen.\+java\end{DoxyCompactItemize}
