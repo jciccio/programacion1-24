@@ -9,8 +9,7 @@ public class ObraDeArte {
   private static final int MIN = 0;
   private static final int MAX = 6;
   private static final int SUBMATRIZ = 1;
-  
-  private int[][] dibujo = new int [ANCHO][ALTO];
+  private int[][] dibujo = new int [ANCHO][ALTO];// z-buffer
   
   JFrame f = null;
   
@@ -22,7 +21,7 @@ public class ObraDeArte {
     
     //getDibujo();
     //dibujarDiagonal();
-    dibujarFila(200, 0, 600,5,1);
+    dibujarFila(200, 0, 600,5,0);
     dibujarFila(400, 0, 600,5,1);
     //dibujarFila(200,200, 400, 10,10);
 
@@ -34,7 +33,8 @@ public class ObraDeArte {
         
         switch (dibujo[i][j]) {
           case 0:
-            imagen.setRGB(i, j, Color.WHITE.getRGB());
+            RGB rgb = new RGB(47,237,53);
+            imagen.setRGB(i, j, rgb.calcularValorFuncional());
             break;
           case 1:
             imagen.setRGB(i, j, Color.BLACK.getRGB());
