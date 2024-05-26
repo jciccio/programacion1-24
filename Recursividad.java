@@ -28,6 +28,17 @@ public class Recursividad{
 		return resultado;
 	}
 
+	public void calcularHanoi(int n, int origen, int intermedio, int destino){
+		if(n == 1){
+			System.out.println("Mover el disco " + n + " desde " + origen + " hasta " + destino);
+		}
+		else{
+			calcularHanoi(n-1, origen, destino, intermedio);
+			System.out.println("Mover el disco " + n + " desde " + origen + " hasta " + destino);
+			calcularHanoi(n-1, intermedio, origen, destino);
+		}
+	}
+
 	public static void main (String [] args){
 		Recursividad recursividad = new Recursividad();
 		int sumatoria5 = recursividad.calcularSumatoria(5);
@@ -39,6 +50,8 @@ public class Recursividad{
 		System.out.println("sumatoria10 "+ sumatoria10);
 
 		System.out.println("Fibonacci de 20 "+ recursividad.calcularFibonacci(20));
+
+		recursividad.calcularHanoi(8,1,2,3);
 	}
 
 }
