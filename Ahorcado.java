@@ -68,8 +68,16 @@ public class Ahorcado {
 		return estado;
 	}
 
+
+
 	public static void main (String[] args){
-		Ahorcado ahorcado = new Ahorcado("escuela");
+		LectorDeArchivos lector = new LectorDeArchivos("palabrasSecretas.txt");
+		String palabras = lector.leerArchivo();
+		// Como separamos las palabras de forma individual?
+		String [] palabra = palabras.split("\n");
+		int celdaAleatoria = (int)(Math.random()*palabra.length);
+
+		Ahorcado ahorcado = new Ahorcado(palabra[celdaAleatoria]);
 		//System.out.println(ahorcado);
 		//ahorcado.buscarLetra("esc");
 		ahorcado.jugar();

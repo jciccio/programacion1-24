@@ -37,4 +37,4 @@ public class Bombillo{
 		System.out.println( b1.getEstado() );
 		System.out.println( b1.getColor() );
 	}
-}
+}// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java
