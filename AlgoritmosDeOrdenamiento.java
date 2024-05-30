@@ -22,6 +22,21 @@ public class AlgoritmosDeOrdenamiento{
 		return copia;
 	}
 
+	public int [] ordenarBurbuja (int [] arreglo){
+		int [] copia = clonar(arreglo);
+		for(int i = 0; i < copia.length; i++){
+			for(int j = copia.length-1; j > i; j--){
+				if(copia[j-1] > copia[j]){
+					int temporal = copia[j-1];
+					copia[j-1] = copia[j];
+					copia[j] = temporal;
+				}
+			}
+		}
+		return copia;
+	}
+	
+
 	public void imprimir(int [] arreglo){
 		for(int i = 0 ; i < arreglo.length; i++){
 			System.out.print(arreglo[i] + "\t");
@@ -33,5 +48,6 @@ public class AlgoritmosDeOrdenamiento{
 		AlgoritmosDeOrdenamiento ao = new AlgoritmosDeOrdenamiento();
 		int [] arreglo = {1,40,-3, 3,6,7,19,12,22,4,5,1,1,4,5};
 		ao.imprimir(ao.ordenarSeleccion(arreglo));
+		ao.imprimir(ao.ordenarBurbuja(arreglo));
 	}
 }

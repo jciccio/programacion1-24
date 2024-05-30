@@ -1,14 +1,30 @@
 import javax.swing.*;
 public class Buscaminas {
 	private int [][] tablero;
+	// -1 representa las minas dentro del tablero
+	// 0 representa que no hay minas alrededor
+	
+	private String [][] tableroUsuario;
 	private int minas;
-	// -1 representa las minas
+	
 
 	public Buscaminas(int filas, int columnas, int minas){
-		tablero = new int[filas][columnas];
-		this.minas = minas;
-		this.colocarMinas(minas);
-		this.llenarTablero();
+		if(filas*columnas > minas){
+			tablero = new int[filas][columnas];
+			this.minas = minas;
+			this.colocarMinas(minas);
+			this.llenarTablero();
+			this.llenarTableroUsuario(filas, columnas);
+		}
+	}
+
+	public void llenarTableroUsuario(int f, int c){
+		tableroUsuario = new String [f][c];		
+		for(int fila = 0 ; fila < tablero.length; fila++){
+			for(int col = 0; col <tablero[fila].length; col++){
+				tableroUsuario[fila][col] = "_";
+			}
+		}
 	}
 
 	public void llenarTablero(){
@@ -36,7 +52,6 @@ public class Buscaminas {
 				}
 			}
 		}
-
 	}
 
 	public boolean colocarMinas(int minas){
@@ -69,6 +84,14 @@ public class Buscaminas {
 				contenido += (tablero[f][c] == -1) ? "* " : tablero[f][c] + " ";
 			}
 			contenido += "\n";
+		}
+
+		contenido += "\r\n - - -  Tablero Usuario - - - - - \r\n";
+		for(int fila = 0 ; fila < tableroUsuario.length; fila++){
+			for(int col = 0; col <tableroUsuario[fila].length; col++){
+				contenido += tableroUsuario[fila][col] + " \t";
+			}
+			contenido += "\r\n";
 		}
 
 		return contenido;
