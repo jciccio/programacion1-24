@@ -25,7 +25,7 @@ public class Interfaz{
 		return numero;
 	}
 
-	public int solicitarString(String mensaje){
+	public String solicitarString(String mensaje){
 		String hilera = JOptionPane.showInputDialog(mensaje);
 		return hilera;
 	}

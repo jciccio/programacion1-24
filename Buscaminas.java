@@ -3,7 +3,7 @@ public class Buscaminas {
 	private int [][] tablero;
 	// -1 representa las minas dentro del tablero
 	// 0 representa que no hay minas alrededor
-	
+
 	private String [][] tableroUsuario;
 	private int minas;
 	
@@ -77,14 +77,76 @@ public class Buscaminas {
 		return colocadas;
 	}
 
+	public boolean realizarMovimiento(int f, int c, boolean perdio){
+		if(	f >= 0 && c >=0 && 
+			f < tablero.length && 
+			c < tablero[f].length){ // caso trivial
+			// caemos en un número > 0 
+			if(tablero[f][c] == -1){ //Caso trivial: caemos en una mina
+				perdio = true;
+				tableroUsuario[f][c] = "M";
+			}
+			else if (tablero[f][c] > 0){
+				tableroUsuario[f][c] = ""+tablero[f][c];
+				perdio = false;
+			}
+			else if (tableroUsuario[f][c] == "_"){
+				tableroUsuario[f][c] = ""+tablero[f][c];
+				int [] cF = {-1,-1,-1, 0,0, 1,1,1};
+				int [] cC = {-1, 0, 1,-1,1,-1,0,1};
+				int contador = 0;
+				while(contador < cF.length){
+					int nuevaF = f + cF[contador];
+					int nuevaC = c + cC[contador];
+					perdio = realizarMovimiento(nuevaF, nuevaC, perdio);
+					contador += 1;
+				}
+			}
+		}
+		return perdio;
+	}
+
+	public boolean verificarGanador(){
+		// El jugador gana si la cantidad de minas es igual a la cantidad de espacios no visitados
+		// Vamos a contar los "_" y si esto es igual a la cantidad de minas
+		int camposSinDesbloquear = 0;
+		for(int f = 0; f < tableroUsuario.length; f++){
+			for(int c = 0; c < tableroUsuario[f].length; c++){
+				if(tableroUsuario[f][c].equals("_")){
+					camposSinDesbloquear++;
+				}
+			}
+		}
+		return camposSinDesbloquear == minas;
+	}
+
+	public void jugar(){
+			// pedir una fila
+			// pedir una columna
+			// realizamos el movimiento
+			// verificar si gana
+		// Un ciclo mientras que no haya ganado
+		Interfaz interfaz = new Interfaz();
+		boolean perdio, gano;
+		do{
+			int fila = interfaz.solicitarNumeroEntero(toString() + " Digite la fila");
+			int columna = interfaz.solicitarNumeroEntero(toString() + " Digite la columna");
+			perdio = realizarMovimiento(fila, columna, false);
+			gano = verificarGanador();
+
+		}while(!gano && !perdio);
+		String mensaje = gano ? "Felicidades, ganó el juego :)" : "Perdio :(";
+		interfaz.mostrarMensaje(mensaje);
+	}
+
 	public String toString(){
 		String contenido = "Hay " + minas + " minas en el tablero. \n";
-		for(int f = 0 ; f < tablero.length; f++){
+		/*for(int f = 0 ; f < tablero.length; f++){
 			for(int c = 0; c < tablero[f].length; c++){
 				contenido += (tablero[f][c] == -1) ? "* " : tablero[f][c] + " ";
 			}
 			contenido += "\n";
-		}
+		}*/
 
 		contenido += "\r\n - - -  Tablero Usuario - - - - - \r\n";
 		for(int fila = 0 ; fila < tableroUsuario.length; fila++){
@@ -99,8 +161,11 @@ public class Buscaminas {
 
 	public static void main (String [] args){
 		Buscaminas buscaminas = new Buscaminas(10,10,10);
-		System.out.println(buscaminas);
-		JOptionPane.showInputDialog(buscaminas);
+		//System.out.println(buscaminas);
+		//JOptionPane.showInputDialog(buscaminas);
+		//buscaminas.realizarMovimiento(1,1, true);
+		//System.out.println(buscaminas);
+		buscaminas.jugar();
 	}
 
 }

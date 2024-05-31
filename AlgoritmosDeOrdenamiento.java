@@ -24,12 +24,15 @@ public class AlgoritmosDeOrdenamiento{
 
 	public int [] ordenarBurbuja (int [] arreglo){
 		int [] copia = clonar(arreglo);
-		for(int i = 0; i < copia.length; i++){
+		boolean intercambioRealizado = true;
+		for(int i = 0; i < copia.length && intercambioRealizado; i++){
+			intercambioRealizado = false;
 			for(int j = copia.length-1; j > i; j--){
 				if(copia[j-1] > copia[j]){
 					int temporal = copia[j-1];
 					copia[j-1] = copia[j];
 					copia[j] = temporal;
+					intercambioRealizado = true;
 				}
 			}
 		}
