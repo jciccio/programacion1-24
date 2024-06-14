@@ -1,4 +1,5 @@
-public class Carta {
+import java.io.Serializable;
+public class Carta implements Serializable {
 	private int numero; // El número será un valor entre 1 y 13
 	private String palo; // Diamantes, Treboles, Corazones, Espadas
 

@@ -67,5 +67,17 @@ public class Hileras{
 		// Reemplaza todas las apariciones
 		// de la letra a por i (todas sin excepción)
 		System.out.println(nuevoString.replace('a', 'i'));
+
+		String h1 = "hola"; //3
+		String h2 = "adios"; //2
+		String h3 = "casa"; // 1
+
+		// zbaaa
+ 		// azzzz
+		System.out.println(h1.compareTo(h2)); // Positivo h1 > h2 => 
+		System.out.println(h2.compareTo(h1));  // Negativo h1 < h2
+		System.out.println(h1.toUpperCase().compareTo(h1.toUpperCase()));
+		System.out.println(h2.toUpperCase().compareTo(h3.toUpperCase()));
+
 	}
 }
