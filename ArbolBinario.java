@@ -129,6 +129,51 @@ public class ArbolBinario{
 		return retorno;
 	}
 
+	public int getLength(){
+		return getLength(this.raiz);
+	}
+
+	public int getLength(Nodo nodo){
+		int contador = 0;
+		if(nodo != null){
+			contador += getLength(nodo.izq);
+			contador += getLength(nodo.der);
+			contador++;
+		}
+		return contador;
+	}
+	public int getLength2(){
+		return getLength2(this.raiz, 0);
+	}
+
+	public int getLength2(Nodo nodo, int contador){
+		if(nodo != null){
+			System.out.println(nodo);
+			contador = getLength2(nodo.izq, contador + 1);
+			contador = getLength2(nodo.der, contador);
+		}
+
+		return contador;
+	}
+
+	public int getProfundidad(){
+		return getProfundidad(this.raiz) -1;
+	}
+
+	public int getProfundidad(Nodo nodo){
+		int profundidadIzq = 0;
+		int profundidadDer = 0;
+		if(nodo != null){
+			if(nodo.izq != null){
+				profundidadIzq = getProfundidad(nodo.izq);
+			}
+			if(nodo.der != null){
+				profundidadDer = getProfundidad(nodo.der);
+			}
+		}
+		return (profundidadIzq > profundidadDer  ? profundidadIzq : profundidadDer) + 1;
+	}
+
 
 	public static void main (String [] args){
 		ArbolBinario ab = new ArbolBinario();
@@ -144,5 +189,7 @@ public class ArbolBinario{
 		ab.borrar(80);
 		ab.imprimir();
 		System.out.println("El 15 se encuentra? "+ (ab.buscar(15) != null));
+		System.out.println("El tam del arbol es: "+ ab.getLength());
+		System.out.println("El tam del arbol es: "+ ab.getLength2());
 	}
 }

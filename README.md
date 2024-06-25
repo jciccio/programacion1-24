@@ -2,6 +2,9 @@
 | ------------- |:-------------:| :-------------:| 
 | ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion1-24.svg?style=for-the-badge)      | [![HitCount](http://hits.dwyl.com/jciccio/programacion1-24.svg)](http://hits.dwyl.com/jciccio/programacion1-24) | Java|
 
+![social](https://img.shields.io/twitter/follow/joseacco12?style=social)
+
+
 # Programación 1-24
 
 ## Material visto en clase

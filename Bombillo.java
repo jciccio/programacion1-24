@@ -38,3 +38,4 @@ public class Bombillo{
 		System.out.println( b1.getColor() );
 	}
 }// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java// Esto es un comentario hecho con nuestro EscritorDeArchivos.java
+// Este comantario lo hicimos con nuestra interfaz grafica
