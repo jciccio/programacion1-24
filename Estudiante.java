@@ -1,22 +1,19 @@
-public class Estudiante{
+public class Estudiante extends Persona{
 
 	// Atributos - Características de cualquier objeto
-	private String nombre;
-	private int edad;
-
+	private String carne;
+	private String carrera;
 
 	// Constructor de clase
-	public Estudiante (){
-		nombre = "Pedro";
-		edad = 10;
+	public Estudiante (String nombre,  
+		String cedula,int edad, String carne, String carrera){
+		
+		super(nombre, cedula, edad);
+		this.carne = carne;
+		this.carrera = carrera;
 	}
 
-	// new Estudiante(  "JP",                  20                );
-	public Estudiante(String nombreEstudiante, int edadEstudiante){
-		nombre = nombreEstudiante;
-		edad = edadEstudiante;
-	}
-
+	
 
 	// Métodos - Acciones que llevamos a cabo en la clase
 	// público o privado -- Accesibilidad
@@ -24,7 +21,7 @@ public class Estudiante{
 	// el nombre del método
 	// lo que recibe el método para que funcione (parámetros)
 	public void saludar(){
-		System.out.println("Hola me llamo " + nombre + " y tengo "+ edad);
+		System.out.println("Hola me llamo " + nombre + " y tengo "+ edad + " y estudio "+ carrera);
 	}
 
 	public void bautizar (String nombreEstudiante){
